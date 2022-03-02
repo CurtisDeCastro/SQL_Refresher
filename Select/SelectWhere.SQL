@@ -21,3 +21,14 @@ WHERE continent = 'South America'
 SELECT name, population
 FROM world
 WHERE name in ('France', 'Germany', 'Italy')
+
+-- returns a table with column 'name' that contains all country names that include the word 'United'
+SELECT name
+FROM world
+WHERE name LIKE '%united%'
+
+-- returns a table with columns 'name', 'population' and 'area' of countries whose population is greater than 250 million or the size is larger than 3 million square kilometers
+SELECT name, population, area
+FROM world
+WHERE population > 250000000
+OR area > 3000000
