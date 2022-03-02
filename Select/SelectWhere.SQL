@@ -32,3 +32,9 @@ SELECT name, population, area
 FROM world
 WHERE population > 250000000
 OR area > 3000000
+
+-- returns a table with columns 'name', 'population' and 'area' of countries that either have a population greater than 250 million OR area greater than 3 million square kilometers BUT NOT BOTH
+SELECT name, population, area
+FROM world
+WHERE (area > 3000000 AND population <= 250000000)
+OR (area < 3000000 AND population > 250000000)
