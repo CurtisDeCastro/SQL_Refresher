@@ -38,3 +38,8 @@ SELECT name, population, area
 FROM world
 WHERE (area > 3000000 AND population <= 250000000)
 OR (area < 3000000 AND population > 250000000)
+
+-- returns a table with columns 'name', 'Pop. (mm)' and 'GDP (bb)' of countries whose population is represented in millions and GDP represented in billions, both rounded to the nearest 2 decimal points
+SELECT Name, Round(population/1000000, 2) as 'Pop. (mm)', Round(gdp/1000000000, 2) as 'GDP (bb)'
+FROM world
+WHERE continent = 'South America'
