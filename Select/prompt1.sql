@@ -51,8 +51,6 @@ SELECT * FROM words;
 --       RETURN @strEnrollmentNumber
 --   END;
 
-
-
 SELECT getNumbers(word), getLetters(word)
 AS "Numbers", "Letters"
 FROM words;
