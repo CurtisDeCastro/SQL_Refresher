@@ -43,3 +43,29 @@ OR (area < 3000000 AND population > 250000000)
 SELECT Name, Round(population/1000000, 2) as 'Pop. (mm)', Round(gdp/1000000000, 2) as 'GDP (bb)'
 FROM world
 WHERE continent = 'South America'
+
+-- returns a table with columns 'name' and 'GDP Per Capita' with the GDP per capita being rounded to the nearest thousand, for countries whose GDP is greater than 1 trillion
+SELECT name, Round(gdp/population, -3) as 'GDP per Capita'
+FROM world
+WHERE gdp >= 1000000000000
+
+
+SELECT name, capital
+FROM world
+WHERE LENGTH(name) = LENGTH(capital)
+
+
+SELECT name, capital
+FROM world
+WHERE Left(capital, 1) = Left(name, 1)
+AND name <> capital
+
+
+SELECT name
+FROM world
+WHERE name LIKE '%a%'
+AND name LIKE '%e%'
+AND name LIKE '%i%'
+AND name LIKE '%o%'
+AND name LIKE '%u%'
+AND name NOT LIKE '% %'
