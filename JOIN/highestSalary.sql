@@ -7,13 +7,13 @@ CREATE TABLE employee(
 );
 
 INSERT INTO employee(name, position, salary)
-  VALUES('John', 'Account Executive', 120000);
+  VALUES('Ariel', 'Account Executive', 120000);
 INSERT INTO employee(name, position, salary)
-  VALUES('Steve', 'Systems Architect', 140000);
+  VALUES('Quinn', 'Systems Architect', 140000);
 INSERT INTO employee(name, position, salary)
-  VALUES('Jane', 'Sales Engineer', 110000);
+  VALUES('Morgan', 'Sales Engineer', 110000);
 INSERT INTO employee(name, position, salary)
-  VALUES('Gina', 'QA Engineer', 90000);
+  VALUES('Alex', 'QA Engineer', 90000);
 
 SELECT *
 FROM employee
